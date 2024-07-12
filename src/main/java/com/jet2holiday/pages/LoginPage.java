@@ -9,6 +9,8 @@ public class LoginPage extends BasePage {
     public LoginPage(){
         PageFactory.initElements(driver, this);
     }
+    String email = properties.getProperty("emailId");
+    String pwd = properties.getProperty("pass");
 
     @FindBy(xpath = "//*[@id='onetrust-accept-btn-handler']")
     WebElement cookieHandler;
@@ -36,16 +38,16 @@ public class LoginPage extends BasePage {
         clickLoginBtn.click();
     }
 
-    public void enterEmailId(String email){
-        emailId.sendKeys(email);
+    public void enterEmailId(String emails){
+        emailId.sendKeys(emails);
     }
 
     public void clickLoginContinueButton(){
         clickLoginContinue.click();
     }
 
-    public void enterPassword(String pwd){
-        passwords.sendKeys(pwd);
+    public void enterPassword(String pass){
+        passwords.sendKeys(pass);
     }
 
     public void clickNextButton(){
@@ -53,12 +55,13 @@ public class LoginPage extends BasePage {
     }
 
 
-    public SearchHoliday directLogin(){
+
+    public SearchHoliday directLogin(String user,String pass){
         clickCookiePage();
         clickLoginButton();
-        enterEmailId("tusharjadhav228@gmail.com");
+        enterEmailId(user);
         clickLoginContinueButton();
-        enterPassword("Sakshi@1228");
+        enterPassword(pass);
         clickNextButton();
         return new SearchHoliday();
     }
