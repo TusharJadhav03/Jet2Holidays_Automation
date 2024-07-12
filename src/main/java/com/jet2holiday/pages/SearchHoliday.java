@@ -15,7 +15,7 @@ public class SearchHoliday extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "(//button[@class=\"search-box-group__link\"])[1]")
+    @FindBy(xpath = "(//button[@class='search-box-group__link'])[1]")
     WebElement clickDepartingListIcon;
 
     @FindBy(xpath = "//span[normalize-space()='Manchester']")
@@ -111,7 +111,7 @@ public class SearchHoliday extends BasePage {
         }
     }
 
-    public void searchHoliday(){
+    public SelectHolidayPackage searchHoliday(){
         try {
             setClickDepartingListIconButton();
         }
@@ -128,5 +128,6 @@ public class SearchHoliday extends BasePage {
         setSelectGuestAndRoom();
         setClickGuestDone();
         setClickSearchHoliday();
+        return new SelectHolidayPackage();
     }
 }

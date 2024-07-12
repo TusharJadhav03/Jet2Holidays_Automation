@@ -1,40 +1,50 @@
 package com.jet2holiday.testcases;
 
 import com.jet2holiday.pages.LoginPage;
+import com.jet2holiday.pages.PassengerDetails;
 import com.jet2holiday.pages.SearchHoliday;
 import com.jet2holiday.pages.SelectHolidayPackage;
 import com.jet2holiday.utils.ExcelFileReading;
 import com.jet2holiday.utils.WebDriverManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class SearchHolidayTest extends SearchHoliday {
+public class SelectHolidayPackageTest extends SelectHolidayPackage {
 
     LoginPage loginPage;
     SearchHoliday searchHoliday;
     SelectHolidayPackage selectHolidayPackage;
+    PassengerDetails passengerDetails;
 
     @BeforeMethod
     public void setUp() throws IOException {
         initialization();
         loginPage = new LoginPage();
         searchHoliday = new SearchHoliday();
+        selectHolidayPackage = new SelectHolidayPackage();
     }
 
+
+
     @Test
-    public void SearchHolidaySingleUser(){
+    public void SelectHolidaySingleUser() throws InterruptedException {
         searchHoliday = loginPage.singleUserLogin();
         selectHolidayPackage = searchHoliday.searchHoliday();
+        passengerDetails = selectHolidayPackage.selectHolidayPackage();
     }
 
     @Test(dataProvider = "LoginData", dataProviderClass = ExcelFileReading.class)
-    public void SearchHolidayMultipleUser(String user,String pwd){
+    public void SelectHolidayMultipleUser(String user,String pwd) throws InterruptedException {
         searchHoliday = loginPage.multipleUserLogin(user, pwd);
         selectHolidayPackage = searchHoliday.searchHoliday();
+        passengerDetails = selectHolidayPackage.selectHolidayPackage();
     }
+
+
 
     @AfterMethod
     public void tearDown() throws InterruptedException {

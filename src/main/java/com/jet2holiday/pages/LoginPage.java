@@ -5,12 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.IOException;
+
 public class LoginPage extends BasePage {
-    public LoginPage(){
+    public LoginPage() throws IOException {
         PageFactory.initElements(driver, this);
     }
-    String email = properties.getProperty("emailId");
-    String pwd = properties.getProperty("pass");
+    public String email = properties.getProperty("emailId");
+    public String pwd = properties.getProperty("pass");
 
     @FindBy(xpath = "//*[@id='onetrust-accept-btn-handler']")
     WebElement cookieHandler;
@@ -56,13 +58,25 @@ public class LoginPage extends BasePage {
 
 
 
-    public SearchHoliday directLogin(String user,String pass){
+    public SearchHoliday singleUserLogin(){
         clickCookiePage();
         clickLoginButton();
-        enterEmailId(user);
+        enterEmailId(email);
         clickLoginContinueButton();
-        enterPassword(pass);
+        enterPassword(pwd);
         clickNextButton();
         return new SearchHoliday();
     }
+
+    public SearchHoliday multipleUserLogin(String emails,String passs){
+        clickCookiePage();
+        clickLoginButton();
+        enterEmailId(emails);
+        clickLoginContinueButton();
+        enterPassword(passs);
+        clickNextButton();
+        return new SearchHoliday();
+    }
+
+
 }
