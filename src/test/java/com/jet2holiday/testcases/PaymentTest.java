@@ -1,14 +1,17 @@
 package com.jet2holiday.testcases;
 
+import com.jet2holiday.listener.TestListners;
 import com.jet2holiday.pages.*;
 import com.jet2holiday.utils.ExcelFileReading;
 import com.jet2holiday.utils.WebDriverManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+@Listeners(TestListners.class)
 public class PaymentTest extends PaymentPage {
     LoginPage loginPage;
     SearchHoliday searchHoliday;

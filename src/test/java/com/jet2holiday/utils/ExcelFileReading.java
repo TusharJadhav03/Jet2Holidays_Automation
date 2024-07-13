@@ -97,6 +97,24 @@ public class ExcelFileReading {
         return combinedData;
     }
 
+    @DataProvider(name="PassengerDetailsWithoutLogin")
+    public static Object[][] PassengerDetailsWithoutLogin() throws IOException {
+        String[][] PassengersDetails = getData("PassengerDetails");
+        int totalRows = PassengersDetails.length;
+        int totalColumns = PassengersDetails[0].length;
+
+        int columnIndex = 2;
+        int startIndex = totalColumns-columnIndex;
+        Object[][] PassengerData = new Object[totalRows][totalColumns];
+        for(int i=0;i<totalRows;i++){
+
+            for(int j=0;j<PassengerData[i].length;j++){
+                PassengerData[i][startIndex++] = PassengersDetails[i][j];
+            }
+        }
+        return PassengersDetails;
+    }
+
     @DataProvider(name = "LoginData")
     public static Object[][] loginData() throws IOException {
         return getData("LoginDetails");
