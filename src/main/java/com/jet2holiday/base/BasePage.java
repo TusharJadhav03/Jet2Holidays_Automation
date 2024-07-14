@@ -29,6 +29,8 @@ public class BasePage{
             properties = new Properties();
             FileInputStream file = new FileInputStream("C:\\Users\\tusha\\IdeaProjects\\Jet2HolidayAutomation\\src\\main\\java\\com\\jet2holiday\\config\\config.properties");
             properties.load(file);
+            FileInputStream fileInputStream = new FileInputStream("C:\\Users\\tusha\\IdeaProjects\\Jet2HolidayAutomation\\Resources\\Log4j.properties");
+            properties.load(fileInputStream);
         }
         catch(Exception e){
             System.out.println(e.getMessage());

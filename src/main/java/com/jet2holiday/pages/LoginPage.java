@@ -1,6 +1,7 @@
 package com.jet2holiday.pages;
 
 import com.jet2holiday.base.BasePage;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -56,7 +57,9 @@ public class LoginPage extends BasePage {
         clickNext.click();
     }
 
-
+    public String getTitle() {
+        return driver.getTitle();
+    }
 
     public SearchHoliday singleUserLogin(){
         clickCookiePage();
