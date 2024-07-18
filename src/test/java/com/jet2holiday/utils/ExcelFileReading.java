@@ -1,6 +1,5 @@
 package com.jet2holiday.utils;
 
-import com.jet2holiday.pages.LoginPage;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -125,6 +124,9 @@ public class ExcelFileReading {
         return getData("PassengerDetails");
     }
 
-
+    @DataProvider(name = "UserDetails")
+    public static Object[][] userDetails() throws IOException {
+        return getData("UserDetails");
+    }
 
 }

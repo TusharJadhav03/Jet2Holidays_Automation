@@ -37,7 +37,7 @@ public class PaymentTest extends PaymentPage {
     @Feature("Feature1 : Payment details")
     @Story("Story : verify payment ")
     @Step("Add payment details with single user")
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     public void Payment(String user,String pass,String fname,String lname,String date,String month,String year,String countrys,String adds,String citys,String nos,String emails,String cnos,String cnames,String cmonths,String cyears,String cvvs) throws InterruptedException {
         searchHoliday = loginPage.singleUserLogin();
         selectHolidayPackage = searchHoliday.searchHoliday();
@@ -52,4 +52,6 @@ public class PaymentTest extends PaymentPage {
         Thread.sleep(5000);
         WebDriverManager.closeDriver();
     }
+
+
 }

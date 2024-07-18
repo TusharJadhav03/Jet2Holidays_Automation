@@ -81,6 +81,23 @@ public class PassengerDetails extends BasePage {
         drpYear.selectByValue(year);
         Thread.sleep(2000);
     }
+    public static void selectDateOfBirth(WebDriver driver, String date, String month, String year) throws InterruptedException {
+        WebElement drpDayEle = driver.findElement(By.xpath("(//select)[2]"));
+        Select drpDay = new Select(drpDayEle);
+        drpDay.selectByValue(date);
+        Thread.sleep(2000);
+
+        WebElement drpMonthEle = driver.findElement(By.xpath("(//select)[3]"));
+        Select drpMonth = new Select(drpMonthEle);
+        drpMonth.selectByValue(month);
+        Thread.sleep(2000);
+
+        WebElement drpYearEle = driver.findElement(By.xpath("(//select)[4]"));
+        Select drpYear = new Select(drpYearEle);
+        drpYear.selectByValue(year);
+        Thread.sleep(2000);
+    }
+
 
     public PaymentPage addPassengerDetails(String fname,String lname,String datep,String monthp,String yearp) throws InterruptedException {
         PassengerDetails pd = new PassengerDetails();
@@ -90,6 +107,19 @@ public class PassengerDetails extends BasePage {
         pd.setEnterFirstName(fname);
         pd.setEnterLastName(lname);
         selectDateOfBirthLogin(driver,datep,monthp,yearp);
+        pd.setLeadPassenger();
+        pd.setPassengerDetailsContinueBtn();
+        pd.setEssential();
+        return  new PaymentPage();
+    }
+    public PaymentPage addPassengerDetail(String fname,String lname,String datep,String monthp,String yearp) throws InterruptedException {
+        PassengerDetails pd = new PassengerDetails();
+        Thread.sleep(3000);
+        pd.setClickTitleDropdown();
+        pd.setClickMrOption();
+        pd.setEnterFirstName(fname);
+        pd.setEnterLastName(lname);
+        selectDateOfBirth(driver,datep,monthp,yearp);
         pd.setLeadPassenger();
         pd.setPassengerDetailsContinueBtn();
         pd.setEssential();

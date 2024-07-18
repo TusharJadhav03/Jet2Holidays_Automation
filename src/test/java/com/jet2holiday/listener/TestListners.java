@@ -3,20 +3,18 @@ package com.jet2holiday.listener;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.observer.ExtentObserver;
 import com.jet2holiday.base.BasePage;
-import com.jet2holiday.utils.Utility;
+import org.apache.poi.hpsf.Date;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 
 
 public class TestListners extends BasePage implements ITestListener {
-
-    Utility utility = new Utility();
 
     @Override
     public void onTestStart(ITestResult result) {
@@ -39,17 +37,13 @@ public class TestListners extends BasePage implements ITestListener {
         test.fail("Test method failed");
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File fs = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        File des = new File("C:\\Users\\tusha\\IdeaProjects\\Jet2HolidayAutomation\\Screenshots\\"+result.getMethod().getMethodName()+".png");
+//        File des = new File("C:\\Users\\tusha\\IdeaProjects\\Jet2HolidayAutomation\\Screenshots\\"+result.getMethod().getMethodName()+".png");
+        File des = new File("C:\\Users\\tusha\\IdeaProjects\\Jet2HolidayAutomation\\Screenshots\\" + result.getMethod().getMethodName() + "_" + new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()) + ".png");
         try {
             FileHandler.copy(fs,des);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-//        try {
-//            Utility.failedTest(result);
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
 
         test.addScreenCaptureFromPath("C:\\Users\\tusha\\IdeaProjects\\Jet2HolidayAutomation\\Screenshots\\" + result.getMethod().getMethodName() + ".png");
         extent.flush();

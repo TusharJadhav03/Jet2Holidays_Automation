@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff6f134c-3321-453f-a670-c2c053aac17c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Resources/Log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jet2holiday/testcases/Tests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jet2holiday/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jet2holiday/base/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jet2holiday/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jet2holiday/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jet2holiday/utils/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jet2holiday/utils/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/Payment.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenshots/Payment.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jet2holiday/pages/PassengerDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jet2holiday/pages/PassengerDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jet2holiday/testdata/Book1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jet2holiday/testdata/Book1.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jet2holiday/utils/WebDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jet2holiday/utils/WebDriverManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/jet2holiday/listener/TestListners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jet2holiday/listener/TestListners.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jet2holiday/testcases/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jet2holiday/testcases/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jet2holiday/testcases/PassengerDetailsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jet2holiday/testcases/PassengerDetailsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/jet2holiday/testcases/PaymentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jet2holiday/testcases/PaymentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jet2holiday/testcases/SearchHolidayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jet2holiday/testcases/SearchHolidayTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jet2holiday/testcases/SelectHolidayPackageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jet2holiday/testcases/SelectHolidayPackageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jet2holiday/utils/ExcelFileReading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jet2holiday/utils/ExcelFileReading.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/ExtentReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/ExtentReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,13 +65,16 @@
     &quot;TestNG.SearchHolidayTest.SearchHolidaySingleUser.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.SelectHolidayPackageTest.SelectHolidayMultipleUser.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.SelectHolidayPackageTest.SelectHolidaySingleUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Tests.BookHolidayWithUserAccount.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Tests.BookHolidayWithoutUserAccount.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Tests.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/tusha/IdeaProjects/Jet2HolidayAutomation/src/test/java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -81,47 +82,11 @@
       <recent name="com.jet2holiday.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginTest.LoginWithMultipleUser">
+  <component name="RunManager" selected="TestNG.Tests.BookHolidayWithoutUserAccount">
     <configuration name="C:/Users/tusha/IdeaProjects/Jet2HolidayAutomation/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Jet2HolidayAutomation" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest.LoginWithMultipleUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Jet2HolidayAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jet2holiday.testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jet2holiday.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.jet2holiday.testcases.LoginTest" />
-      <option name="METHOD_NAME" value="LoginWithMultipleUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PassengerDetailsTest.PassengerDetailsSingleUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Jet2HolidayAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jet2holiday.testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jet2holiday.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.jet2holiday.testcases.PassengerDetailsTest" />
-      <option name="METHOD_NAME" value="PassengerDetailsSingleUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -146,7 +111,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SelectHolidayPackageTest.SelectHolidayMultipleUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Tests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Jet2HolidayAutomation" />
       <extension name="coverage">
         <pattern>
@@ -155,8 +120,43 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.jet2holiday.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.jet2holiday.testcases.SelectHolidayPackageTest" />
-      <option name="METHOD_NAME" value="SelectHolidayMultipleUser" />
+      <option name="MAIN_CLASS_NAME" value="com.jet2holiday.testcases.Tests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests.BookHolidayWithUserAccount" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Jet2HolidayAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jet2holiday.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jet2holiday.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.jet2holiday.testcases.Tests" />
+      <option name="METHOD_NAME" value="BookHolidayWithUserAccount" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests.BookHolidayWithoutUserAccount" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Jet2HolidayAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jet2holiday.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jet2holiday.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.jet2holiday.testcases.Tests" />
+      <option name="METHOD_NAME" value="BookHolidayWithoutUserAccount" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -166,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginTest.LoginWithMultipleUser" />
-        <item itemvalue="TestNG.C:/Users/tusha/IdeaProjects/Jet2HolidayAutomation/testng.xml" />
+        <item itemvalue="TestNG.Tests.BookHolidayWithoutUserAccount" />
         <item itemvalue="TestNG.PaymentTest.Payment" />
-        <item itemvalue="TestNG.SelectHolidayPackageTest.SelectHolidayMultipleUser" />
-        <item itemvalue="TestNG.PassengerDetailsTest.PassengerDetailsSingleUser" />
+        <item itemvalue="TestNG.C:/Users/tusha/IdeaProjects/Jet2HolidayAutomation/testng.xml" />
+        <item itemvalue="TestNG.Tests" />
+        <item itemvalue="TestNG.Tests.BookHolidayWithUserAccount" />
       </list>
     </recent_temporary>
   </component>
